@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>برا السالفة PRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- الصفحة الرئيسية -->
+  <div class="card" id="screen-home">
+    <h1><i class="fas fa-theater-masks"></i> برا السالفة PRO</h1>
+    <input class="input" id="playerNames" placeholder="أسماء اللاعبين (افصل بينهم بفاصلة)">
+    <h3>اختر الكاتاقوري</h3>
+    <div id="categories" class="list"></div>
+    <button class="btn" id="startBtn"><i class="fas fa-play"></i> ابدأ</button>
+  </div>
+
+  <!-- تمرير الجوال -->
+  <div class="card hidden" id="screen-players">
+    <h2><i class="fas fa-hand-paper"></i> مرر الجوال</h2>
+    <p id="passText"></p>
+    <button class="btn" id="revealBtn"><i class="fas fa-eye"></i> التالي</button>
+  </div>
+
+  <!-- شاشة اللعب -->
+  <div class="card hidden" id="screen-play">
+    <div id="questionBox" class="question-box"></div>
+    <button class="btn" id="nextQuestionBtn"><i class="fas fa-forward"></i> التالي</button>
+    <button class="btn secondary" id="voteBtn"><i class="fas fa-vote-yea"></i> تصويت</button>
+  </div>
+
+</div>
+
+<!-- مودال الدور -->
+<div class="modal" id="roleModal">
+  <div class="card">
+    <h2 id="roleTitle"></h2>
+    <div id="roleText" class="reveal"></div>
+    <button class="btn" id="roleNextBtn"><i class="fas fa-check"></i> تم</button>
+  </div>
+</div>
+
+<!-- مودال التصويت -->
+<div class="modal" id="voteModal">
+  <div class="card">
+    <h2 id="voteTitle"></h2>
+    <div id="voteOptions" class="list"></div>
+  </div>
+</div>
+
+<!-- إشعار احترافي -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
